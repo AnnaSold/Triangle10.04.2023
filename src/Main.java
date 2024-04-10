@@ -1,3 +1,6 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -7,7 +10,7 @@ public class Main {
 
 
     }
-    public void readFile(){
+    public void readFile() throws FileNotFoundException {
         ArrayList<Triangle> triangles = new ArrayList<>();
         String filename = "INPUT.txt";
         Scanner scan = new Scanner(new File(filename));
@@ -15,7 +18,7 @@ public class Main {
             double ab = scan.nextDouble();
             double bc = scan.nextDouble();
             double ac = scan.nextDouble();
-            triangles.add(new Triangle((ab, bc, ac)))
+            triangles.add(new Triangle(ab, bc, ac));
         }
         scan.close();
     }
