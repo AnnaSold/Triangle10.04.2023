@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Triangle {
         double ab;
         double bc;
@@ -9,7 +11,16 @@ public class Triangle {
             this.ac = ac;
         }
 
-        public double calculateAreaFigure(){
+    @Override
+    public String toString() {
+        return "Triangle{" +
+                "ab=" + ab +
+                ", bc=" + bc +
+                ", ac=" + ac +
+                '}';
+    }
+
+    public  double calculateAreaFigure(){
             double trP = ab + bc + ac;
 
             double p = trP/2;
@@ -21,5 +32,7 @@ public class Triangle {
             if ((a+b > c) && (a+c> b) && (b+c>a)) return true;
             else return false;
         }
+
+
     }
 
