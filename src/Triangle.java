@@ -17,5 +17,9 @@ public class Triangle {
             //System.out.println(trArea);
             return trArea;
         }
+        public static boolean compareStoronTriangle(double a, double b, double c){
+            if ((a+b > c) && (a+c> b) && (b+c>a)) return true;
+            else return false;
+        }
     }
 

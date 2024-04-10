@@ -14,13 +14,14 @@ public class Main {
         ArrayList<Triangle> triangles = new ArrayList<>();
         String filename = "INPUT.txt";
         Scanner scan = new Scanner(new File(filename));
-        while(scan.hasNext()){
+        while (scan.hasNext()) {
             double ab = scan.nextDouble();
             double bc = scan.nextDouble();
             double ac = scan.nextDouble();
-            triangles.add(new Triangle(ab, bc, ac));
+            if (Triangle.compareStoronTriangle(ab, bc, ac)) {
+                triangles.add(new Triangle(ab, bc, ac));
+            }
+            scan.close();
         }
-        scan.close();
-    }
 
-}
+    }}
